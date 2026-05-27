@@ -39,5 +39,6 @@ verify_response.json
 # 秘密情報
 .env
 .env.*
+!.env.example
 *.pem
 secrets/
