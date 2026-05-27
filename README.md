@@ -5,6 +5,7 @@
 ## ドキュメント
 
 - [アーキテクチャ](ARCHITECTURE.md)
+- [初回セットアップ / 別端末利用](docs/SETUP.md)
 - [個人情報保護・Git 管理方針](docs/PRIVACY.md)
 - [進捗・TODO](TODO.md)
 
@@ -18,16 +19,18 @@ uv run pytest tests/test_verifier.py -v
 
 ## 起動（API + 撮影 UI）
 
+事前に `docs/SETUP.md` の「初回セットアップ」を実施してください。
+
 ```powershell
 # Windows: --reload は Playwright と相性が悪いため付けない
 uv run uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-| URL | 用途 |
-|-----|------|
-| http://127.0.0.1:8000/ | 撮影・検証 UI（フェーズ1） |
-| http://127.0.0.1:8000/docs | OpenAPI |
-| http://127.0.0.1:8000/health | 死活監視 |
+| URL                          | 用途                       |
+| ---------------------------- | -------------------------- |
+| http://127.0.0.1:8000/       | 撮影・検証 UI（フェーズ1） |
+| http://127.0.0.1:8000/docs   | OpenAPI                    |
+| http://127.0.0.1:8000/health | 死活監視                   |
 
 **スマホから使う場合:** PC と同一 Wi‑Fi にし、PC の LAN IP で `http://<IP>:8000/` を開く。iPhone でカメラが使えない場合は HTTPS トンネル（ngrok 等）を検討。
 
