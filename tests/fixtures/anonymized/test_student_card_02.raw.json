@@ -1,0 +1,41 @@
+{
+  "figures": [],
+  "paragraphs": [
+    {
+      "box": [100, 50, 500, 120],
+      "contents": "サンプル大学\n学生証",
+      "direction": "horizontal",
+      "order": 0,
+      "role": "section_headings"
+    },
+    {
+      "box": [100, 130, 500, 180],
+      "contents": "学籍番号 X00XX000",
+      "direction": "horizontal",
+      "order": 1,
+      "role": null
+    },
+    {
+      "box": [100, 190, 500, 240],
+      "contents": "名 山田 太郎",
+      "direction": "horizontal",
+      "order": 2,
+      "role": null
+    },
+    {
+      "box": [100, 250, 500, 300],
+      "contents": "氏",
+      "direction": "horizontal",
+      "order": 3,
+      "role": null
+    },
+    {
+      "box": [100, 310, 500, 360],
+      "contents": "有効期限 2027年 3月31日",
+      "direction": "horizontal",
+      "order": 4,
+      "role": null
+    }
+  ],
+  "words": []
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a365d" />
+    <title>学生証 OCR 検証</title>
+    <link rel="stylesheet" href="/web/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>学生証 OCR</h1>
+        <p class="subtitle">撮影または画像を選択して検証します</p>
+      </header>
+
+      <section class="card" aria-labelledby="capture-heading">
+        <h2 id="capture-heading" class="section-title">画像</h2>
+        <label class="file-label">
+          <span class="file-label-text">カメラで撮影 / ギャラリーから選択</span>
+          <input
+            id="file-input"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            capture="environment"
+          />
+        </label>
+        <div id="preview-wrap" class="preview-wrap hidden" hidden>
+          <img id="preview" class="preview" alt="選択した画像のプレビュー" />
+        </div>
+        <p class="hint">QR が画面内に入るよう、明るい場所で撮影してください。</p>
+      </section>
+
+      <section class="card optional" id="api-key-section" hidden>
+        <h2 class="section-title">API Key</h2>
+        <input
+          id="api-key-input"
+          type="password"
+          class="text-input"
+          autocomplete="off"
+          placeholder="X-API-Key（サーバ設定が必要な場合）"
+        />
+      </section>
+
+      <button id="submit-btn" type="button" class="primary-btn" disabled>
+        検証する
+      </button>
+      <p id="status-line" class="status-line" role="status" aria-live="polite"></p>
+
+      <section id="result-section" class="card result-section hidden" hidden>
+        <h2 class="section-title">結果</h2>
+        <dl id="summary" class="summary"></dl>
+        <details class="raw-details">
+          <summary>JSON（詳細）</summary>
+          <pre id="result-json" class="result-json"></pre>
+        </details>
+      </section>
+    </main>
+    <script src="/web/app.js" defer></script>
+  </body>
+</html>

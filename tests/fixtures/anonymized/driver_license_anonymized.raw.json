@@ -1,0 +1,20 @@
+{
+  "figures": [],
+  "paragraphs": [
+    {
+      "box": [10, 10, 200, 40],
+      "contents": "運転免許証",
+      "direction": "horizontal",
+      "order": 0,
+      "role": "section_headings"
+    },
+    {
+      "box": [10, 50, 400, 80],
+      "contents": "2024年(令和06年)06月01日まで有効",
+      "direction": "horizontal",
+      "order": 1,
+      "role": null
+    }
+  ],
+  "words": []
+}

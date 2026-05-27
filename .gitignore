@@ -1,0 +1,43 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv
+
+# 個人情報を含み得る生成物・ローカル収集データ（Git管理禁止）
+raw_data_output/
+debug_output/
+sample_data/
+
+# テスト用画像: 既定はすべて除外し、匿名化済みサンプルのみ許可
+tests/test_images/*
+!tests/test_images/README.md
+!tests/test_images/test_student_card_01.jpg
+!tests/test_images/test_student_card_02.jpg
+tests/test_images/local/
+
+# その他の画像（fixture 以外）
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tif
+*.tiff
+!tests/test_images/test_student_card_01.jpg
+!tests/test_images/test_student_card_02.jpg
+
+# ローカル検証の API レスポンス（PII を含み得る）
+verify_response.json
+
+# 秘密情報
+.env
+.env.*
+*.pem
+secrets/
