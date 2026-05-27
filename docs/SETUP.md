@@ -2,8 +2,6 @@
 
 このプロジェクトは `uv` を使って Python 依存を管理し、OCR と QR 真偽判定に `opencv-python` / `pyzbar` / `yomitoku` / `playwright` を利用します。
 
-以下は **あなたが別の端末（別PC含む）でプロジェクトを利用する**ための手順です。
-
 ---
 
 ## 前提（必須）
